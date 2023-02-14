@@ -23,21 +23,22 @@ Partial Class frmBurgers
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblHeading = New System.Windows.Forms.Label()
-        Me.picPrime = New System.Windows.Forms.PictureBox()
-        Me.picVeggie = New System.Windows.Forms.PictureBox()
         Me.btnPrime = New System.Windows.Forms.Button()
         Me.btnSelectMeal = New System.Windows.Forms.Button()
         Me.btnVeggie = New System.Windows.Forms.Button()
         Me.lblInstructions = New System.Windows.Forms.Label()
         Me.lblConfirmation = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
-        CType(Me.picPrime, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.picVeggie = New System.Windows.Forms.PictureBox()
+        Me.picPrime = New System.Windows.Forms.PictureBox()
         CType(Me.picVeggie, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picPrime, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblHeading
         '
         Me.lblHeading.Font = New System.Drawing.Font("Tahoma", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeading.ForeColor = System.Drawing.Color.Red
         Me.lblHeading.Location = New System.Drawing.Point(260, 10)
         Me.lblHeading.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblHeading.Name = "lblHeading"
@@ -45,53 +46,42 @@ Partial Class frmBurgers
         Me.lblHeading.TabIndex = 0
         Me.lblHeading.Text = "Farm Burger Specials"
         '
-        'picPrime
-        '
-        Me.picPrime.Location = New System.Drawing.Point(70, 70)
-        Me.picPrime.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.picPrime.Name = "picPrime"
-        Me.picPrime.Size = New System.Drawing.Size(260, 250)
-        Me.picPrime.TabIndex = 1
-        Me.picPrime.TabStop = False
-        '
-        'picVeggie
-        '
-        Me.picVeggie.Location = New System.Drawing.Point(430, 70)
-        Me.picVeggie.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.picVeggie.Name = "picVeggie"
-        Me.picVeggie.Size = New System.Drawing.Size(260, 250)
-        Me.picVeggie.TabIndex = 2
-        Me.picVeggie.TabStop = False
-        '
         'btnPrime
         '
+        Me.btnPrime.BackColor = System.Drawing.Color.Wheat
+        Me.btnPrime.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrime.Location = New System.Drawing.Point(137, 342)
-        Me.btnPrime.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnPrime.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPrime.Name = "btnPrime"
         Me.btnPrime.Size = New System.Drawing.Size(128, 35)
         Me.btnPrime.TabIndex = 3
         Me.btnPrime.Text = "Prime Beef"
-        Me.btnPrime.UseVisualStyleBackColor = True
+        Me.btnPrime.UseVisualStyleBackColor = False
         '
         'btnSelectMeal
         '
+        Me.btnSelectMeal.BackColor = System.Drawing.Color.Wheat
+        Me.btnSelectMeal.Enabled = False
+        Me.btnSelectMeal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSelectMeal.Location = New System.Drawing.Point(317, 342)
-        Me.btnSelectMeal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSelectMeal.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSelectMeal.Name = "btnSelectMeal"
         Me.btnSelectMeal.Size = New System.Drawing.Size(128, 35)
         Me.btnSelectMeal.TabIndex = 4
         Me.btnSelectMeal.Text = "Select Meal"
-        Me.btnSelectMeal.UseVisualStyleBackColor = True
+        Me.btnSelectMeal.UseVisualStyleBackColor = False
         '
         'btnVeggie
         '
+        Me.btnVeggie.BackColor = System.Drawing.Color.Wheat
+        Me.btnVeggie.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVeggie.Location = New System.Drawing.Point(494, 342)
-        Me.btnVeggie.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnVeggie.Margin = New System.Windows.Forms.Padding(2)
         Me.btnVeggie.Name = "btnVeggie"
         Me.btnVeggie.Size = New System.Drawing.Size(128, 35)
         Me.btnVeggie.TabIndex = 5
         Me.btnVeggie.Text = "Veggie"
-        Me.btnVeggie.UseVisualStyleBackColor = True
+        Me.btnVeggie.UseVisualStyleBackColor = False
         '
         'lblInstructions
         '
@@ -112,21 +102,50 @@ Partial Class frmBurgers
         Me.lblConfirmation.Size = New System.Drawing.Size(172, 18)
         Me.lblConfirmation.TabIndex = 7
         Me.lblConfirmation.Text = "Enjoy your burger special"
+        Me.lblConfirmation.Visible = False
         '
         'btnExit
         '
+        Me.btnExit.BackColor = System.Drawing.Color.Wheat
+        Me.btnExit.Enabled = False
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.Location = New System.Drawing.Point(317, 489)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(128, 35)
         Me.btnExit.TabIndex = 8
         Me.btnExit.Text = "Exit Window"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'picVeggie
+        '
+        Me.picVeggie.Image = Global.BurgerSpecials_CPSC3118.My.Resources.Resources.veggie
+        Me.picVeggie.Location = New System.Drawing.Point(430, 70)
+        Me.picVeggie.Margin = New System.Windows.Forms.Padding(2)
+        Me.picVeggie.Name = "picVeggie"
+        Me.picVeggie.Size = New System.Drawing.Size(260, 250)
+        Me.picVeggie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picVeggie.TabIndex = 2
+        Me.picVeggie.TabStop = False
+        Me.picVeggie.Visible = False
+        '
+        'picPrime
+        '
+        Me.picPrime.Image = Global.BurgerSpecials_CPSC3118.My.Resources.Resources.prime
+        Me.picPrime.Location = New System.Drawing.Point(70, 70)
+        Me.picPrime.Margin = New System.Windows.Forms.Padding(2)
+        Me.picPrime.Name = "picPrime"
+        Me.picPrime.Size = New System.Drawing.Size(260, 250)
+        Me.picPrime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picPrime.TabIndex = 1
+        Me.picPrime.TabStop = False
+        Me.picPrime.Visible = False
         '
         'frmBurgers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FloralWhite
         Me.ClientSize = New System.Drawing.Size(784, 551)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.lblConfirmation)
@@ -137,11 +156,11 @@ Partial Class frmBurgers
         Me.Controls.Add(Me.picVeggie)
         Me.Controls.Add(Me.picPrime)
         Me.Controls.Add(Me.lblHeading)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmBurgers"
         Me.Text = "Burger Specials"
-        CType(Me.picPrime, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picVeggie, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picPrime, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
